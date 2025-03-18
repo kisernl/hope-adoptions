@@ -113,8 +113,8 @@ export default {
 				'slide-in': 'slideIn 0.6s ease-out forwards'
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
-				serif: ['Playfair Display', 'serif']
+				sans: ['Quicksand', 'sans-serif'],
+				serif: ['Poppins', 'sans-serif']
 			},
 			transitionDuration: {
 				'2000': '2000ms',

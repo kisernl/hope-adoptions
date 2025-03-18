@@ -51,8 +51,7 @@ const HeroSection = ({
         </div>
       </div>
       
-      {/* Changed from h-20 to h-8 to make the fade transition much shorter */}
-      <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent"></div>
+      {/* Removed the gradient fade transition between sections */}
     </section>
   );
 };
