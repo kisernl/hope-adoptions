@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Heart } from "lucide-react";
 
 const Footer = () => {
@@ -100,6 +101,16 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+            
+            {/* Added Donate Button */}
+            <div className="mt-6">
+              <Link to="/donate">
+                <Button className="w-full bg-brand-pink hover:bg-brand-pink/90 text-brand-navy font-semibold">
+                  <Heart className="mr-2" size={18} />
+                  Donate Now
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
         

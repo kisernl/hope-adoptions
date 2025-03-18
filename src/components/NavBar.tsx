@@ -33,18 +33,26 @@ const NavBar = () => {
     scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
   }`;
 
-  const linkClasses = "text-brand-navy font-medium hover:text-brand-blue transition-colors duration-300";
-  const activeLinkClasses = "text-brand-blue font-semibold";
+  // Change link classes based on scroll position
+  const linkClasses = scrolled 
+    ? "text-brand-navy font-medium hover:text-brand-blue transition-colors duration-300" 
+    : "text-white font-medium hover:text-brand-pink/90 transition-colors duration-300";
+  
+  const activeLinkClasses = scrolled
+    ? "text-brand-blue font-semibold"
+    : "text-brand-pink font-semibold";
 
   return (
     <nav className={navClasses}>
       <div className="container-custom flex justify-between items-center">
         <Link 
           to="/" 
-          className="font-serif text-2xl font-bold text-brand-navy transition-all duration-300 hover:opacity-80 flex items-center gap-2"
+          className={`font-serif text-2xl font-bold transition-all duration-300 hover:opacity-80 flex items-center gap-2 ${
+            scrolled ? "text-brand-navy" : "text-white"
+          }`}
           aria-label="Home"
         >
-          <Heart className="text-brand-blue" size={24} />
+          <Heart className={scrolled ? "text-brand-blue" : "text-brand-pink"} size={24} />
           LovelyAdopt
         </Link>
         
@@ -56,17 +64,11 @@ const NavBar = () => {
           <Link to="/about" className={location.pathname === "/about" ? activeLinkClasses : linkClasses}>
             About Us
           </Link>
-          <Link to="/staff" className={location.pathname === "/staff" ? activeLinkClasses : linkClasses}>
-            Our Staff
-          </Link>
           <Link to="/resources" className={location.pathname === "/resources" ? activeLinkClasses : linkClasses}>
             Resources
           </Link>
           <Link to="/faq" className={location.pathname === "/faq" ? activeLinkClasses : linkClasses}>
             FAQ
-          </Link>
-          <Link to="/donate" className={location.pathname === "/donate" ? activeLinkClasses : linkClasses}>
-            Donate
           </Link>
           <Link to="/contact">
             <Button className="btn-primary ml-2">Contact Us</Button>
@@ -75,7 +77,7 @@ const NavBar = () => {
         
         {/* Mobile Navigation Toggle */}
         <button 
-          className="md:hidden text-brand-navy"
+          className={`md:hidden ${scrolled ? "text-brand-navy" : "text-white"}`}
           onClick={toggleMenu}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
@@ -96,17 +98,11 @@ const NavBar = () => {
           <Link to="/about" className={`text-xl ${location.pathname === "/about" ? activeLinkClasses : linkClasses}`}>
             About Us
           </Link>
-          <Link to="/staff" className={`text-xl ${location.pathname === "/staff" ? activeLinkClasses : linkClasses}`}>
-            Our Staff
-          </Link>
           <Link to="/resources" className={`text-xl ${location.pathname === "/resources" ? activeLinkClasses : linkClasses}`}>
             Resources
           </Link>
           <Link to="/faq" className={`text-xl ${location.pathname === "/faq" ? activeLinkClasses : linkClasses}`}>
             FAQ
-          </Link>
-          <Link to="/donate" className={`text-xl ${location.pathname === "/donate" ? activeLinkClasses : linkClasses}`}>
-            Donate
           </Link>
           <Link to="/contact" className="w-full">
             <Button className="btn-primary w-full mt-4">Contact Us</Button>

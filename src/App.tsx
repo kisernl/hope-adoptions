@@ -12,7 +12,6 @@ import About from "./pages/About";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
-import Staff from "./pages/Staff";
 import Donate from "./pages/Donate";
 import NotFound from "./pages/NotFound";
 
@@ -55,7 +54,6 @@ const App = () => {
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/faq" element={<FAQ />} />
-                <Route path="/staff" element={<Staff />} />
                 <Route path="/donate" element={<Donate />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
