@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X, Heart, Home } from "lucide-react";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,7 +73,7 @@ const NavBar = () => {
             FAQ
           </Link>
           <Link to="/contact">
-            <Button className="btn-primary ml-2">Contact Us</Button>
+            <Button className="bg-brand-navy hover:bg-brand-navy/90 text-white">Contact Us</Button>
           </Link>
         </div>
         
@@ -89,7 +89,19 @@ const NavBar = () => {
       
       {/* Mobile Navigation Drawer - Always light with dark text */}
       <div className={`${mobileNavClasses} ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <button 
+          className="absolute top-6 right-6 text-brand-navy"
+          onClick={closeMenu}
+          aria-label="Close menu"
+        >
+          <X size={24} />
+        </button>
+        
         <div className="flex flex-col space-y-6 items-center">
+          <Link to="/" className={`text-xl ${location.pathname === "/" ? "text-brand-blue font-semibold" : "text-brand-navy font-medium hover:text-brand-blue"} flex items-center gap-2`}>
+            <Home size={20} />
+            Home
+          </Link>
           <Link to="/about" className={`text-xl ${location.pathname === "/about" ? "text-brand-blue font-semibold" : "text-brand-navy font-medium hover:text-brand-blue"}`}>
             About Us
           </Link>
@@ -100,7 +112,7 @@ const NavBar = () => {
             FAQ
           </Link>
           <Link to="/contact" className="w-full">
-            <Button className="btn-primary w-full mt-4">Contact Us</Button>
+            <Button className="bg-brand-navy hover:bg-brand-navy/90 text-white w-full mt-4">Contact Us</Button>
           </Link>
         </div>
       </div>

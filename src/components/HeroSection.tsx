@@ -26,7 +26,7 @@ const HeroSection = ({
     
   return (
     <section 
-      className="relative py-20 md:py-32 bg-brand-navy overflow-hidden" 
+      className="relative py-20 md:py-32 bg-brand-navy overflow-hidden loaded" 
       style={bgStyle}
     >
       {backgroundImage && (
@@ -41,7 +41,7 @@ const HeroSection = ({
           </p>
           <Link to={buttonLink}>
             <Button 
-              className="btn-primary animate-slide-up"
+              className="bg-brand-navy hover:bg-brand-navy/90 text-white animate-slide-up"
               style={{animationDelay: '400ms'}}
             >
               {buttonText}
@@ -50,8 +50,6 @@ const HeroSection = ({
           {children}
         </div>
       </div>
-      
-      {/* Removed the gradient fade transition between sections */}
     </section>
   );
 };
