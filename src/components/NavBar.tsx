@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,25 +41,35 @@ const NavBar = () => {
       <div className="container-custom flex justify-between items-center">
         <Link 
           to="/" 
-          className="font-serif text-2xl font-bold text-brand-navy transition-all duration-300 hover:opacity-80"
+          className="font-serif text-2xl font-bold text-brand-navy transition-all duration-300 hover:opacity-80 flex items-center gap-2"
           aria-label="Home"
         >
+          <Heart className="text-brand-blue" size={24} />
           LovelyAdopt
         </Link>
         
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           <Link to="/" className={location.pathname === "/" ? activeLinkClasses : linkClasses}>
             Home
           </Link>
           <Link to="/about" className={location.pathname === "/about" ? activeLinkClasses : linkClasses}>
             About Us
           </Link>
+          <Link to="/staff" className={location.pathname === "/staff" ? activeLinkClasses : linkClasses}>
+            Our Staff
+          </Link>
           <Link to="/resources" className={location.pathname === "/resources" ? activeLinkClasses : linkClasses}>
             Resources
           </Link>
+          <Link to="/faq" className={location.pathname === "/faq" ? activeLinkClasses : linkClasses}>
+            FAQ
+          </Link>
+          <Link to="/donate" className={location.pathname === "/donate" ? activeLinkClasses : linkClasses}>
+            Donate
+          </Link>
           <Link to="/contact">
-            <Button className="btn-primary ml-4">Contact Us</Button>
+            <Button className="btn-primary ml-2">Contact Us</Button>
           </Link>
         </div>
         
@@ -86,8 +96,17 @@ const NavBar = () => {
           <Link to="/about" className={`text-xl ${location.pathname === "/about" ? activeLinkClasses : linkClasses}`}>
             About Us
           </Link>
+          <Link to="/staff" className={`text-xl ${location.pathname === "/staff" ? activeLinkClasses : linkClasses}`}>
+            Our Staff
+          </Link>
           <Link to="/resources" className={`text-xl ${location.pathname === "/resources" ? activeLinkClasses : linkClasses}`}>
             Resources
+          </Link>
+          <Link to="/faq" className={`text-xl ${location.pathname === "/faq" ? activeLinkClasses : linkClasses}`}>
+            FAQ
+          </Link>
+          <Link to="/donate" className={`text-xl ${location.pathname === "/donate" ? activeLinkClasses : linkClasses}`}>
+            Donate
           </Link>
           <Link to="/contact" className="w-full">
             <Button className="btn-primary w-full mt-4">Contact Us</Button>

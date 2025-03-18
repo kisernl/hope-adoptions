@@ -26,7 +26,7 @@ const HeroSection = ({
     
   return (
     <section 
-      className="relative py-20 md:py-32 bg-brand-pink/20 overflow-hidden" 
+      className="relative py-20 md:py-32 bg-brand-navy overflow-hidden" 
       style={bgStyle}
     >
       {backgroundImage && (
@@ -35,8 +35,8 @@ const HeroSection = ({
       
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="heading-xl mb-4 animate-fade-in text-brand-navy">{title}</h1>
-          <p className="subheading mb-8 max-w-2xl mx-auto animate-slide-up" style={{animationDelay: '200ms'}}>
+          <h1 className="heading-xl mb-4 animate-fade-in text-brand-pink">{title}</h1>
+          <p className="subheading mb-8 max-w-2xl mx-auto animate-slide-up text-white/90" style={{animationDelay: '200ms'}}>
             {subtitle}
           </p>
           <Link to={buttonLink}>
