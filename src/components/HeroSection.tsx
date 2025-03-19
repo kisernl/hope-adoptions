@@ -64,15 +64,15 @@ const HeroSection = ({
 
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="heading-xl mb-4 animate-fade-in text-brand-pink">
-            {title}
-          </h1>
           <p
             className="subheading mb-8 max-w-2xl mx-auto animate-slide-up text-white/90"
             style={{ animationDelay: "200ms" }}
           >
             {subtitle}
           </p>
+          <h1 className="heading-xl mb-12 animate-fade-in text-brand-pink">
+            {title}
+          </h1>
           <Link to={buttonLink}>
             <Button
               className="bg-brand-pink hover:bg-brand-pink/90 text-brand-navy font-medium animate-slide-up"

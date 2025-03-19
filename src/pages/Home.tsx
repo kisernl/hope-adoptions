@@ -20,21 +20,21 @@ const Home = () => {
 
   const adoptionQuestions = [
     {
-      title: "Who Can Adopt?",
+      title: "What is Adoption?",
       content:
-        "We welcome diverse families, including singles, couples, LGBTQ+, and families of all backgrounds. The main requirements are stability, love, and the desire to provide a nurturing home.",
+        "There are many types of adoptions out there, but all in all adoption is a gift for vulnerable children who need to know the love of family. We at Hope Adoptions desire to walk families through the journey of adoption and provide them with resources that they need along the way.",
       icon: <CircleHelp size={40} />,
     },
     {
-      title: "How Long Does Adoption Take?",
+      title: "Is Adoption Right for Me?",
       content:
-        "The timeline varies based on factors like adoption type, legal requirements, and individual circumstances. On average, families complete the process within 1-2 years.",
+        "Adoption is a beautiful parenting option; however, only you can decide if it's the best choice for you! You are not alone; mothers and fathers from all walks of life have been in your situation. By learning about this option, you can be confident in your decision regarding the options of adoption",
       icon: <CircleHelp size={40} />,
     },
     {
-      title: "What Are the Costs?",
+      title: "Why Adoption?",
       content:
-        "Adoption expenses vary by type and situation. We provide transparent fee structures, financial planning assistance, and information about available grants and tax credits.",
+        "Adoption is a path of hope and love. For a mother making a brave choice, it's hope for a future filled with possibility for her child. For a child, it's the hope of a loving family to cherish them. For a family, it's the hope of a dream fulfilled. It's love creating new beginnings.",
       icon: <CircleHelp size={40} />,
     },
   ];
@@ -43,19 +43,19 @@ const Home = () => {
     {
       title: "Open Adoption",
       content:
-        "Birth parents and adoptive families share identifying information and maintain ongoing contact. This creates relationships built on mutual respect, allowing children to understand their origins and maintain connections.",
+        "Birth parents and adoptive families share identifying information and maintain ongoing contact. This option seeks to create relationships built on mutual respect, allowing children to understand their origins and maintain connections.",
       icon: <Heart size={40} />,
     },
     {
       title: "Semi-Open Adoption",
       content:
-        "A middle path where limited information is shared. Communication typically occurs through an agency or mediator. This option balances privacy with a child's need to understand their background.",
+        "A middle path where limited information is shared. Communication typically occurs through an agency or mediator. This option seeks to balance privacy with a child's need to understand their background.",
       icon: <Users size={40} />,
     },
     {
       title: "Closed Adoption",
       content:
-        "No identifying information is shared between birth and adoptive families. While less common today, this option provides maximum privacy for all parties involved when needed.",
+        "No identifying information is shared between birth and adoptive families. This option provides maximum privacy for all parties involved when needed.",
       icon: <BookOpen size={40} />,
     },
   ];
@@ -64,7 +64,7 @@ const Home = () => {
     <>
       <HeroSection
         title="Offering Hope for Every Family"
-        subtitle="We're with you through every step of your adoption journey with compassion, expertise, and personalized support."
+        subtitle="Wanted. Chosen. Loved. Adopted."
         buttonText="Contact Us Today"
         buttonLink="/contact"
         backgroundVideo="./assests/HopeAdoptions_VideoBanner.mp4"
@@ -99,7 +99,7 @@ const Home = () => {
         }
         buttonText="Learn More About Us"
         buttonLink="/about"
-        imageUrl="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+        imageUrl="./assests/sq-pregnant-1.png"
       />
 
       <CardSection
@@ -111,10 +111,10 @@ const Home = () => {
 
       <TextSection
         title="We're Here For Your Family"
-        content="We understand that building a family through adoption is a significant decision filled with emotions, questions, and hopes. Our dedicated team is committed to supporting you with experienced guidance, compassionate understanding, and comprehensive resources every step of the way."
+        content="We understand that growing a family through adoption is a significant decision filled with emotions, questions, and hopes. Our dedicated team is committed to supporting you with experienced guidance, compassionate understanding, and comprehensive resources every step of the way."
         buttonText="Explore Our Resources"
         buttonLink="/resources"
-        imageUrl="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+        imageUrl="./assests/Family_1.png"
         reverseOrder={true}
         className="bg-brand-pink/10"
       />
