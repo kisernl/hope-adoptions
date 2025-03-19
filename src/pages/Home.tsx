@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import TextSection from "@/components/TextSection";
@@ -16,7 +15,7 @@ import {
 
 const Home = () => {
   useEffect(() => {
-    document.title = "LovelyAdopt | Building Families Through Love";
+    document.title = "Hope Adoptions | Offering Hope for Every Family";
   }, []);
 
   const adoptionQuestions = [
@@ -64,12 +63,12 @@ const Home = () => {
   return (
     <>
       <HeroSection
-        title="Building Families Through Love"
-        subtitle="We guide you through every step of your adoption journey with compassion, expertise, and personalized support."
+        title="Offering Hope for Every Family"
+        subtitle="We're with you through every step of your adoption journey with compassion, expertise, and personalized support."
         buttonText="Contact Us Today"
         buttonLink="/contact"
-        backgroundVideo="https://player.vimeo.com/external/369687412.sd.mp4?s=9c33af0b94e8e6068b644c84ac9175fa94e48030&profile_id=164&oauth2_token_id=57447761"
-        backgroundImage="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" // Fallback image
+        backgroundVideo="./assests/HopeAdoptions_VideoBanner.mp4"
+        backgroundImage="./assests/Banner1.png" // Fallback image
       />
 
       <TextSection

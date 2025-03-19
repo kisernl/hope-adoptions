@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -20,17 +19,22 @@ const HeroSection = ({
   buttonLink,
   backgroundImage,
   backgroundVideo,
-  children
+  children,
 }: HeroSectionProps) => {
   // Define background style based on image (used as fallback)
-  const bgStyle = backgroundImage 
-    ? { backgroundImage: `url(${backgroundImage})` }
+  const bgStyle = backgroundImage
+    ? {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        loading: "lazy",
+      }
     : {};
-    
+
   return (
-    <section 
-      className="relative py-20 md:py-32 bg-brand-navy overflow-hidden loaded" 
-      style={bgStyle}
+    <section
+      className="relative py-20 md:py-32 bg-brand-navy overflow-hidden loaded h-screen flex items-center justify-center"
+      style={backgroundVideo ? {} : bgStyle}
     >
       {/* Video Background */}
       {backgroundVideo && (
@@ -42,28 +46,37 @@ const HeroSection = ({
             loop
             playsInline
           >
-            <source src={backgroundVideo} type="video/mp4" />
+            <source
+              src={backgroundVideo}
+              // src="./assests/HopeAdoptions_VideoBanner.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
       )}
-      
+
       {/* Image Fallback with overlay */}
       {backgroundImage && !backgroundVideo && (
         <div className="absolute inset-0 bg-black/40"></div>
       )}
-      
+
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="heading-xl mb-4 animate-fade-in text-brand-pink">{title}</h1>
-          <p className="subheading mb-8 max-w-2xl mx-auto animate-slide-up text-white/90" style={{animationDelay: '200ms'}}>
+          <h1 className="heading-xl mb-4 animate-fade-in text-brand-pink">
+            {title}
+          </h1>
+          <p
+            className="subheading mb-8 max-w-2xl mx-auto animate-slide-up text-white/90"
+            style={{ animationDelay: "200ms" }}
+          >
             {subtitle}
           </p>
           <Link to={buttonLink}>
-            <Button 
-              className="bg-[#D946EF] hover:bg-[#D946EF]/90 text-brand-navy font-medium animate-slide-up"
-              style={{animationDelay: '400ms'}}
+            <Button
+              className="bg-brand-pink hover:bg-brand-pink/90 text-brand-navy font-medium animate-slide-up"
+              style={{ animationDelay: "400ms" }}
             >
               {buttonText}
             </Button>
