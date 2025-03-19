@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
 import TextSection from "@/components/TextSection";
@@ -50,7 +49,7 @@ const About = () => {
           </>
         }
         imageUrl="https://images.unsplash.com/photo-1721322800607-8c38375eef04"
-        className="bg-white"
+        className="bg-white loaded"
       />
       
       <CardSection

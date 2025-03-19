@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,17 +18,6 @@ const Footer = () => {
             <p className="text-gray-600 mt-4">
               Creating forever families through compassionate adoption services, guidance, and support.
             </p>
-            <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-brand-navy hover:text-brand-blue transition-colors" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-brand-navy hover:text-brand-blue transition-colors" aria-label="Instagram">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-brand-navy hover:text-brand-blue transition-colors" aria-label="Twitter">
-                <Twitter size={20} />
-              </a>
-            </div>
           </div>
           
           {/* Quick Links */}
@@ -102,7 +91,7 @@ const Footer = () => {
               </li>
             </ul>
             
-            {/* Added Donate Button - Updated color */}
+            {/* Donate Button */}
             <div className="mt-6">
               <Link to="/donate">
                 <Button className="w-full bg-[#51B9CD] hover:bg-[#51B9CD]/90 text-white font-semibold">
@@ -114,12 +103,10 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-100 mt-12 pt-8 text-center">
-          <p className="text-gray-600 text-sm flex flex-col sm:flex-row items-center justify-center">
-            <span>© {currentYear} LovelyAdopt. All rights reserved.</span> 
-            <span className="flex items-center sm:ml-1">
-              Made with <Heart size={14} className="text-brand-blue mx-1" fill="#51B9CD" /> for families everywhere.
-            </span>
+        <div className="border-t border-gray-100 mt-12 pt-8">
+          <p className="text-gray-600 text-sm text-center">
+            © {currentYear} LovelyAdopt. All rights reserved. 
+            <span className="inline-block">Made with <Heart size={14} className="text-brand-blue mx-1 inline" fill="#51B9CD" /> for families everywhere.</span>
           </p>
         </div>
       </div>
