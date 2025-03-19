@@ -63,12 +63,13 @@ const Home = () => {
   return (
     <>
       <HeroSection
-        title="Offering Hope for Every Family"
+        titleOne="Offering Hope for"
+        titleTwo="Every Family"
         subtitle="Wanted. Chosen. Loved. Adopted."
         buttonText="Contact Us Today"
         buttonLink="/contact"
-        backgroundVideo="./assests/HopeAdoptions_VideoBanner.mp4"
-        backgroundImage="./assests/Banner1.png" // Fallback image
+        backgroundVideo="./assets/HopeAdoptions_VideoBanner.mp4"
+        backgroundImage="./assets/Banner1.png" // Fallback image
       />
 
       <TextSection
@@ -99,7 +100,7 @@ const Home = () => {
         }
         buttonText="Learn More About Us"
         buttonLink="/about"
-        imageUrl="./assests/sq-pregnant-1.png"
+        imageUrl="./assets/sq-pregnant-1.png"
       />
 
       <CardSection
@@ -114,7 +115,7 @@ const Home = () => {
         content="We understand that growing a family through adoption is a significant decision filled with emotions, questions, and hopes. Our dedicated team is committed to supporting you with experienced guidance, compassionate understanding, and comprehensive resources every step of the way."
         buttonText="Explore Our Resources"
         buttonLink="/resources"
-        imageUrl="./assests/Family_1.png"
+        imageUrl="./assets/Family_1.png"
         reverseOrder={true}
         className="bg-brand-pink/10"
       />

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
-  title: string;
+  titleOne: string;
+  titleTwo: string;
   subtitle: string;
   buttonText: string;
   buttonLink: string;
@@ -13,7 +14,8 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  title,
+  titleOne,
+  titleTwo,
   subtitle,
   buttonText,
   buttonLink,
@@ -71,7 +73,9 @@ const HeroSection = ({
             {subtitle}
           </p>
           <h1 className="heading-xl mb-12 animate-fade-in text-brand-pink">
-            {title}
+            {titleOne}
+            <br />
+            {titleTwo}
           </h1>
           <Link to={buttonLink}>
             <Button

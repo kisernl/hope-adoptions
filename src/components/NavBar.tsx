@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -55,7 +54,7 @@ const NavBar = () => {
       <div className="container-custom flex justify-between items-center">
         <Link
           to="/"
-          className={`font-serif text-2xl font-bold transition-all duration-300 hover:opacity-80 flex items-center gap-2 ${
+          className={`font-serif text-2xl font-semibold transition-all duration-300 hover:opacity-80 flex items-center gap-2 ${
             scrolled || !isHomePage ? "text-brand-navy" : "text-white"
           }`}
           aria-label="Home"
@@ -98,7 +97,13 @@ const NavBar = () => {
             FAQ
           </Link>
           <Link to="/contact">
-            <Button className={scrolled || !isHomePage ? "bg-brand-navy hover:bg-brand-navy/90 text-white" : "bg-brand-pink hover:bg-brand-pink/90 text-brand-navy"}>
+            <Button
+              className={
+                scrolled || !isHomePage
+                  ? "bg-brand-navy hover:bg-brand-navy/90 text-white"
+                  : "bg-brand-pink hover:bg-brand-pink/90 text-brand-navy"
+              }
+            >
               Contact Us
             </Button>
           </Link>
