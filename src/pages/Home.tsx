@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import TextSection from "@/components/TextSection";
@@ -67,6 +68,8 @@ const Home = () => {
         subtitle="We guide you through every step of your adoption journey with compassion, expertise, and personalized support."
         buttonText="Contact Us Today"
         buttonLink="/contact"
+        backgroundVideo="https://player.vimeo.com/external/369687412.sd.mp4?s=9c33af0b94e8e6068b644c84ac9175fa94e48030&profile_id=164&oauth2_token_id=57447761"
+        backgroundImage="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" // Fallback image
       />
 
       <TextSection
@@ -171,7 +174,7 @@ const Home = () => {
               <Link to="/resources">
                 <Button
                   variant="outline"
-                  className="border-white text-white hover:bg-white/10 min-w-[160px]"
+                  className="border-white bg-white text-brand-navy hover:bg-white/90 min-w-[160px]"
                 >
                   Explore Resources
                 </Button>

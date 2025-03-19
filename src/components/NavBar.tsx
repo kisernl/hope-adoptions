@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -68,7 +69,7 @@ const NavBar = () => {
           Hope Adoptions
         </Link>
 
-        {/* Desktop Navigation - Home link removed */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <Link
             to="/about"
@@ -97,7 +98,7 @@ const NavBar = () => {
             FAQ
           </Link>
           <Link to="/contact">
-            <Button className="bg-brand-pink hover:bg-brand-navy/90 text-brand-navy">
+            <Button className={scrolled || !isHomePage ? "bg-brand-navy hover:bg-brand-navy/90 text-white" : "bg-brand-pink hover:bg-brand-pink/90 text-brand-navy"}>
               Contact Us
             </Button>
           </Link>

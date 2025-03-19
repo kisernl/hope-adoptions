@@ -9,6 +9,7 @@ interface HeroSectionProps {
   buttonText: string;
   buttonLink: string;
   backgroundImage?: string;
+  backgroundVideo?: string;
   children?: ReactNode;
 }
 
@@ -18,8 +19,10 @@ const HeroSection = ({
   buttonText,
   buttonLink,
   backgroundImage,
+  backgroundVideo,
   children
 }: HeroSectionProps) => {
+  // Define background style based on image (used as fallback)
   const bgStyle = backgroundImage 
     ? { backgroundImage: `url(${backgroundImage})` }
     : {};
@@ -29,8 +32,26 @@ const HeroSection = ({
       className="relative py-20 md:py-32 bg-brand-navy overflow-hidden loaded" 
       style={bgStyle}
     >
-      {backgroundImage && (
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+      {/* Video Background */}
+      {backgroundVideo && (
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video
+            className="absolute min-w-full min-h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+      )}
+      
+      {/* Image Fallback with overlay */}
+      {backgroundImage && !backgroundVideo && (
+        <div className="absolute inset-0 bg-black/40"></div>
       )}
       
       <div className="container-custom relative z-10">
@@ -41,7 +62,7 @@ const HeroSection = ({
           </p>
           <Link to={buttonLink}>
             <Button 
-              className="bg-brand-navy hover:bg-brand-navy/90 text-white animate-slide-up"
+              className="bg-[#D946EF] hover:bg-[#D946EF]/90 text-brand-navy font-medium animate-slide-up"
               style={{animationDelay: '400ms'}}
             >
               {buttonText}

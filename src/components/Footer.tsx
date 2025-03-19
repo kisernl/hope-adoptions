@@ -102,10 +102,10 @@ const Footer = () => {
               </li>
             </ul>
             
-            {/* Added Donate Button */}
+            {/* Added Donate Button - Updated color */}
             <div className="mt-6">
               <Link to="/donate">
-                <Button className="w-full bg-brand-pink hover:bg-brand-pink/90 text-brand-navy font-semibold">
+                <Button className="w-full bg-[#51B9CD] hover:bg-[#51B9CD]/90 text-white font-semibold">
                   <Heart className="mr-2" size={18} />
                   Donate Now
                 </Button>
@@ -115,10 +115,11 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-100 mt-12 pt-8 text-center">
-          <p className="text-gray-600 text-sm flex items-center justify-center">
-            © {currentYear} LovelyAdopt. All rights reserved. Made with 
-            <Heart size={14} className="text-brand-blue mx-1" fill="#51B9CD" /> 
-            for families everywhere.
+          <p className="text-gray-600 text-sm flex flex-col sm:flex-row items-center justify-center">
+            <span>© {currentYear} LovelyAdopt. All rights reserved.</span> 
+            <span className="flex items-center sm:ml-1">
+              Made with <Heart size={14} className="text-brand-blue mx-1" fill="#51B9CD" /> for families everywhere.
+            </span>
           </p>
         </div>
       </div>
