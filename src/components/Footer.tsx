@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Heart } from "lucide-react";
@@ -76,39 +77,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
-          {/* <div className="md:col-span-2 space-y-4">
-            <h3 className="font-serif text-lg font-semibold text-brand-navy">
-              Adoption Types
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="#open-adoption"
-                  className="text-gray-600 hover:text-brand-blue transition-colors"
-                >
-                  Open Adoption
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#semi-open-adoption"
-                  className="text-gray-600 hover:text-brand-blue transition-colors"
-                >
-                  Semi-Open Adoption
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#closed-adoption"
-                  className="text-gray-600 hover:text-brand-blue transition-colors"
-                >
-                  Closed Adoption
-                </a>
-              </li>
-            </ul>
-          </div> */}
-
           {/* Contact Info */}
           <div className="md:col-span-3 space-y-4">
             <h3 className="font-serif text-lg font-semibold text-brand-navy">
@@ -154,18 +122,24 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-100 mt-12 pt-8">
-          <p className="text-gray-600 text-sm text-center">
-            © {currentYear} Hope Adoptions. All rights reserved.{" "}
-            <span className="inline-block">
-              Made with{" "}
-              <Heart
-                size={14}
-                className="text-brand-blue mx-1 inline"
-                fill="#51B9CD"
-              />{" "}
-              for families everywhere.
-            </span>
-          </p>
+          <div className="text-center">
+            <p className="text-gray-600 text-sm mb-2">
+              © {currentYear} Hope Adoptions. All rights reserved.
+            </p>
+            <p className="text-gray-600 text-sm">
+              Web design and hosting by Mayfly Creative
+              <span className="mx-2 inline-block">•</span>
+              <span className="inline-block">
+                Made with{" "}
+                <Heart
+                  size={14}
+                  className="text-brand-blue mx-1 inline"
+                  fill="#51B9CD"
+                />{" "}
+                for families everywhere.
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

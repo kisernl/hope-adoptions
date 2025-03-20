@@ -1,11 +1,9 @@
-
 import { useEffect, useState } from "react";
 import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { MapPin, Phone, Mail, Clock, CheckCircle } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -14,7 +12,6 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    interest: "adoptive-parent",
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,10 +25,6 @@ const Contact = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleRadioChange = (value: string) => {
-    setFormData(prev => ({ ...prev, interest: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -113,28 +106,6 @@ const Contact = () => {
                       onChange={handleChange}
                       className="bg-gray-50 border-gray-200"
                     />
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <Label>I am interested in:</Label>
-                    <RadioGroup 
-                      value={formData.interest} 
-                      onValueChange={handleRadioChange}
-                      className="flex flex-col space-y-3"
-                    >
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="adoptive-parent" id="adoptive-parent" />
-                        <Label htmlFor="adoptive-parent" className="cursor-pointer">Becoming an adoptive parent</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="birth-parent" id="birth-parent" />
-                        <Label htmlFor="birth-parent" className="cursor-pointer">Birth parent services</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="general-info" id="general-info" />
-                        <Label htmlFor="general-info" className="cursor-pointer">General information</Label>
-                      </div>
-                    </RadioGroup>
                   </div>
                   
                   <div className="space-y-3">
