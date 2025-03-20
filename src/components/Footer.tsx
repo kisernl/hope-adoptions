@@ -136,7 +136,7 @@ const Footer = () => {
                   href="mailto:info@lovelyadopt.com"
                   className="text-gray-600 hover:text-brand-blue transition-colors"
                 >
-                  info@hopeadoptions.com
+                  contact@hopeadoptions.org
                 </a>
               </li>
             </ul>
@@ -155,7 +155,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-100 mt-12 pt-8">
           <p className="text-gray-600 text-sm text-center">
-            © {currentYear} Hope Adoptions. All rights reserved.
+            © {currentYear} Hope Adoptions. All rights reserved.{" "}
             <span className="inline-block">
               Made with{" "}
               <Heart
