@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
 import {
@@ -8,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { HandHeart } from "lucide-react";
+import ExternalDonationInfo from "@/components/donation/ExternalDonationInfo";
 
 const Donate = () => {
   useEffect(() => {
@@ -62,6 +64,11 @@ const Donate = () => {
               contribution creates lasting positive impacts in the lives of
               families formed through adoption.
             </p>
+          </div>
+
+          {/* Add the external donation info component at the top */}
+          <div className="mb-12">
+            <ExternalDonationInfo className="max-w-3xl mx-auto" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
