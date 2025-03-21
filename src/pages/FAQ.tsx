@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import PageHeader from "@/components/PageHeader";
 import {
@@ -10,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import UnderConstruction from "@/components/UnderConstruction";
+import EmailUs from "@/components/contact/EmailUs";
 
 const FAQ = () => {
   const [activeTab, setActiveTab] = useState("getting-started");
@@ -149,19 +151,28 @@ const FAQ = () => {
               </Tabs>
             </div>
 
-            <div className="bg-brand-lightBlue/10 p-8 rounded-lg text-center max-w-3xl mx-auto loaded">
-              <h3 className="heading-sm mb-4 text-brand-navy">
-                Still Have Questions?
-              </h3>
-              <p className="mb-6 text-gray-700">
-                Our team is here to help. Reach out with any questions or to
-                schedule a consultation.
-              </p>
-              <Link to="/contact">
-                <Button className="bg-brand-navy hover:bg-brand-navy/90 text-white">
-                  Contact Us
-                </Button>
-              </Link>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-brand-lightBlue/10 p-8 rounded-lg text-center loaded">
+                <h3 className="heading-sm mb-4 text-brand-navy">
+                  Still Have Questions?
+                </h3>
+                <p className="mb-6 text-gray-700">
+                  Our team is here to help. Reach out with any questions or to
+                  schedule a consultation.
+                </p>
+                <Link to="/contact">
+                  <Button className="bg-brand-navy hover:bg-brand-navy/90 text-white">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
+              
+              <EmailUs
+                title="Question Not Listed?"
+                message="Send us your specific questions directly via email and we'll respond promptly."
+                email="questions@hopeadoptions.org"
+                buttonText="Email Your Question"
+              />
             </div>
           </div>
         </section>

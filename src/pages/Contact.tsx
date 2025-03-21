@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/contact/ContactForm";
 import ContactInfo from "@/components/contact/ContactInfo";
 import CallToAction from "@/components/contact/CallToAction";
+import EmailUs from "@/components/contact/EmailUs";
 
 const Contact = () => {
   useEffect(() => {
@@ -30,6 +31,19 @@ const Contact = () => {
             </div>
             
             <ContactInfo />
+          </div>
+        </div>
+      </section>
+      
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-xl mx-auto">
+            <EmailUs 
+              title="Direct Email Contact" 
+              message="Prefer to use your own email client? Send us a message directly, and we'll respond as soon as possible."
+              email="contact@hopeadoptions.org"
+              buttonText="Send Email"
+            />
           </div>
         </div>
       </section>
