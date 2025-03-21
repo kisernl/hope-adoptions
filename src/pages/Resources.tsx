@@ -23,6 +23,10 @@ const Resources = () => {
     document.title = "Resources | LovelyAdopt";
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Birth Parent Resources
   const birthParentResources = [
     {

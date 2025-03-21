@@ -10,6 +10,10 @@ const Contact = () => {
     document.title = "Contact Us | LovelyAdopt";
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <PageHeader

@@ -15,6 +15,10 @@ const About = () => {
     document.title = "About Us | Hope Adoptions";
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const values = [
     {
       title: "Compassion",
@@ -45,7 +49,7 @@ const About = () => {
   return (
     <>
       <PageHeader
-        title="About Hope Adoptions"
+        title="About Us"
         subtitle="Our mission is to create loving families through ethical, supportive, and compassionate adoption services."
       />
 
