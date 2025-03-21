@@ -20,7 +20,7 @@ import UnderConstruction from "@/components/UnderConstruction";
 
 const Resources = () => {
   useEffect(() => {
-    document.title = "Resources | LovelyAdopt";
+    document.title = "Resources | Hope Adoptions";
   }, []);
 
   useEffect(() => {

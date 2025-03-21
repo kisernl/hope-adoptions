@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import PageHeader from "@/components/PageHeader";
 import {
@@ -17,7 +16,7 @@ const FAQ = () => {
   const [activeTab, setActiveTab] = useState("getting-started");
 
   useEffect(() => {
-    document.title = "FAQ | LovelyAdopt";
+    document.title = "FAQ | Hope Adoptions";
 
     // Add loaded class to elements that are visible on initial load
     const initialVisibleElements = document.querySelectorAll(".lazy-load");
@@ -166,7 +165,7 @@ const FAQ = () => {
                   </Button>
                 </Link>
               </div>
-              
+
               <EmailUs
                 title="Question Not Listed?"
                 message="Send us your specific questions directly via email and we'll respond promptly."

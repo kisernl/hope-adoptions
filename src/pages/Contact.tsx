@@ -7,7 +7,7 @@ import EmailUs from "@/components/contact/EmailUs";
 
 const Contact = () => {
   useEffect(() => {
-    document.title = "Contact Us | LovelyAdopt";
+    document.title = "Contact Us | Hope Adoptions";
   }, []);
 
   useEffect(() => {

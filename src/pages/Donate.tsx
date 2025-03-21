@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import PageHeader from "@/components/PageHeader";
 import {
@@ -10,10 +9,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { HandHeart } from "lucide-react";
 import ExternalDonationInfo from "@/components/donation/ExternalDonationInfo";
+import DonateByCheck from "@/components/donation/DonateByCheck";
 
 const Donate = () => {
   useEffect(() => {
-    document.title = "Donate | LovelyAdopt";
+    document.title = "Donate | Hope Adoptions";
   }, []);
 
   useEffect(() => {
@@ -58,11 +58,11 @@ const Donate = () => {
               Your Gift Makes a Difference
             </h2>
             <p className="text-gray-700 lazy-load">
-              When you donate to LovelyAdopt, you're helping provide essential
-              services to children and families throughout the adoption process.
-              From pre-adoption counseling to post-adoption support, your
-              contribution creates lasting positive impacts in the lives of
-              families formed through adoption.
+              When you donate to Hope Adoptions, you're helping provide
+              essential services to children and families throughout the
+              adoption process. From pre-adoption counseling to post-adoption
+              support, your contribution creates lasting positive impacts in the
+              lives of families formed through adoption.
             </p>
           </div>
 
@@ -71,7 +71,11 @@ const Donate = () => {
             <ExternalDonationInfo className="max-w-3xl mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="mb-12">
+            <DonateByCheck className="max-w-3xl mx-auto" />
+          </div>
+
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {donationOptions.map((option, index) => (
               <Card
                 key={index}
@@ -141,7 +145,7 @@ const Donate = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
