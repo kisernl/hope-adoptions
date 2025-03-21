@@ -75,77 +75,13 @@ const Donate = () => {
             <DonateByCheck className="max-w-3xl mx-auto" />
           </div>
 
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {donationOptions.map((option, index) => (
-              <Card
-                key={index}
-                className="lazy-load shadow-md hover:shadow-lg transition-all duration-300"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader className="pb-4">
-                  <div className="flex justify-center mb-4">{option.icon}</div>
-                  <h3 className="text-xl font-serif font-semibold text-center text-brand-navy">
-                    {option.title}
-                  </h3>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-center mb-6">
-                    {option.description}
-                  </p>
-
-                  {option.amounts ? (
-                    <div className="grid grid-cols-2 gap-2">
-                      {option.amounts.map((amount, idx) => (
-                        <Button
-                          key={idx}
-                          variant="outline"
-                          className="border-brand-blue text-brand-blue hover:bg-brand-blue/10"
-                        >
-                          ${amount}
-                        </Button>
-                      ))}
-                    </div>
-                  ) : null}
-                </CardContent>
-                <CardFooter className="flex justify-center pt-2">
-                  {option.button ? (
-                    <Button className="btn-primary w-full">
-                      {option.button}
-                    </Button>
-                  ) : (
-                    <Button className="btn-primary w-full">Donate Now</Button>
-                  )}
-                </CardFooter>
-              </Card>
-            ))}
+          {/* Tax deduction information */}
+          <div className="max-w-3xl mx-auto mt-12 p-6 bg-gray-50 rounded-lg border border-gray-200 text-center">
+            <p className="text-gray-700">
+              <strong>Tax Information:</strong> Donations to Hope Adoptions are tax deductible to the extent allowed by law. 
+              Please note that payment of adoption fees is not tax deductible.
+            </p>
           </div>
-
-          <div className="mt-16 p-8 bg-brand-pink/20 rounded-lg max-w-4xl mx-auto">
-            <h3 className="heading-sm mb-4 text-center text-brand-navy">
-              Other Ways to Support
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="lazy-load">
-                <h4 className="font-serif text-lg font-semibold mb-2 text-brand-navy">
-                  Planned Giving
-                </h4>
-                <p className="text-gray-700">
-                  Consider including LovelyAdopt in your estate planning to
-                  create a lasting legacy of helping children find forever
-                  homes.
-                </p>
-              </div>
-              <div className="lazy-load" style={{ animationDelay: "100ms" }}>
-                <h4 className="font-serif text-lg font-semibold mb-2 text-brand-navy">
-                  In-Kind Donations
-                </h4>
-                <p className="text-gray-700">
-                  Donate goods, services, or professional skills to help us
-                  operate efficiently and serve more families.
-                </p>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
     </>

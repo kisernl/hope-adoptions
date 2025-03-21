@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import TextSection from "@/components/TextSection";
@@ -7,7 +8,7 @@ import { Link } from "react-router-dom";
 import {
   Heart,
   Users,
-  BookOpen,
+  Shield,
   MessageCircle,
   CircleHelp,
   HandHeart,
@@ -56,7 +57,7 @@ const Home = () => {
       title: "Closed Adoption",
       content:
         "No identifying information is shared between birth and adoptive families. This option provides maximum privacy for all parties involved when needed.",
-      icon: <BookOpen size={40} />,
+      icon: <Shield size={40} />,
     },
   ];
 
