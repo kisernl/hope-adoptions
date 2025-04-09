@@ -28,7 +28,7 @@ const ContactInfo = () => {
             </h3>
             <p className="text-gray-600">
               <a
-                href="tel:+1234567890"
+                href="tel:+13345027000"
                 className="hover:text-brand-blue transition-colors"
               >
                 (334) 502-7000
@@ -49,7 +49,7 @@ const ContactInfo = () => {
             </h3>
             <p className="text-gray-600">
               <a
-                href="mailto:info@lovelyadopt.com"
+                href="mailto:contact@hopeadoptions.org"
                 className="hover:text-brand-blue transition-colors"
               >
                 contact@hopeadoptions.org
