@@ -78,7 +78,7 @@ const NavBar = () => {
           >
             About Us
           </Link>
-          <Link
+          {/* <Link
             to="/resources"
             className={
               location.pathname === "/resources"
@@ -95,7 +95,7 @@ const NavBar = () => {
             }
           >
             FAQ
-          </Link>
+          </Link> */}
           <Link to="/contact">
             <Button
               className={
@@ -157,7 +157,7 @@ const NavBar = () => {
           >
             About Us
           </Link>
-          <Link
+          {/* <Link
             to="/resources"
             className={`text-xl ${
               location.pathname === "/resources"
@@ -176,7 +176,7 @@ const NavBar = () => {
             }`}
           >
             FAQ
-          </Link>
+          </Link> */}
           <Link to="/contact" className="w-full">
             <Button className="bg-brand-navy hover:bg-brand-navy/90 text-white w-full mt-4">
               Contact Us

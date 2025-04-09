@@ -91,7 +91,7 @@ const Resources = () => {
     },
   ];
 
-  const underConstruction = false;
+  const underConstruction = true;
 
   if (underConstruction) {
     return <UnderConstruction />;

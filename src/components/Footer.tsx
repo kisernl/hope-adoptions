@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Heart } from "lucide-react";
@@ -46,14 +45,14 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/resources"
                   className="text-gray-600 hover:text-brand-blue transition-colors"
                 >
                   Resources
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/contact"

@@ -35,7 +35,7 @@ const ContactInfo = () => {
               </a>
             </p>
             <p className="text-sm text-gray-500 mt-1">
-              **this is the number for our larger organization (WHMC), just let
+              **this is the number for our parent organization (WHMC), just let
               our receptionist know you are calling about Hope Adoptions!
             </p>
           </div>

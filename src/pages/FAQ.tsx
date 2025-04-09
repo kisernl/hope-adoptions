@@ -89,7 +89,7 @@ const FAQ = () => {
   ];
 
   // Use this to toggle "under construction" for live launch
-  const underConstruction = false;
+  const underConstruction = true;
 
   if (underConstruction) {
     return <UnderConstruction />;

@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import HeroSection from "@/components/HeroSection";
 import TextSection from "@/components/TextSection";
@@ -85,11 +84,10 @@ const Home = () => {
             </p>
             <p>
               You might be wondering, 'How does the adoption process work, and
-              is it the right path for me?' Our experienced counselors are here
-              to provide you with compassionate support and comprehensive
+              is it the right path for me?' Our experienced team members are
+              here to provide you with compassionate support and comprehensive
               information. We'll take the time to thoroughly explain the
-              adoption process, relevant laws, and your rights, ensuring you
-              feel fully informed and empowered.
+              adoption process, ensuring you feel fully informed and empowered.
             </p>
             <p>
               Reaching out to us is simply an opportunity to gain clarity and
