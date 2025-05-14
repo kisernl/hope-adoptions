@@ -1,4 +1,4 @@
-# [HopeAdoptions.org](www.hopeadoptions.org)
+# [HopeAdoptions.org](hopeadoptions.org)
 Site built and deployed for local adoption agency in Auburn, AL
 
 ## What technologies are used for this project?
