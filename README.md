@@ -1,4 +1,5 @@
-# Site built and deployed for local Adoption Agency in Auburn, AL
+# [HopeAdoptions.org](www.hopeadoptions.org)
+Site built and deployed for local adoption agency in Auburn, AL
 
 ## What technologies are used for this project?
 
